@@ -1,18 +1,18 @@
 {% set name = "astroalign" %}
-{% set version = "2.0.2" %}
+{% set version = "2.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: f88b47f6383309840c6d4c7f7d47b61111b51bf9d55162a11de1595264139ee0
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 407a0680db6cacf463a1d2fd181c6a9a90ffe5c973700f5c46a3aa6972c2f73e
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -34,7 +34,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: "A tool to align astronomical images based on asterism matching"
+  summary: A tool to align astronomical images based on asterism matching
   description: |
     ASTROALIGN is a python module that will try to align two stellar
     astronomical images, especially when there is no WCS information available.
