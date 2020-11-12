@@ -20,7 +20,7 @@ requirements:
     - python
   run:
     - numpy >=1.6.2
-    - python
+    - python >=3.5
     - scikit-image
     - scipy >=0.15
     - sep
