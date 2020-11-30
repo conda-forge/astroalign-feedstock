@@ -5,9 +5,13 @@ Home: https://astroalign.readthedocs.io/
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/astroalign-feedstock/blob/master/LICENSE.txt)
 
 Summary: A tool to align astronomical images based on asterism matching
+
+Development: https://github.com/toros-astro/astroalign
+
+Documentation: https://astroalign.readthedocs.io/
 
 ASTROALIGN is a python module that will try to align two stellar
 astronomical images, especially when there is no WCS information available.
