@@ -1,5 +1,5 @@
 {% set name = "astroalign" %}
-{% set version = "2.4.1" %}
+{% set version = "2.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bd14ee62ed0f1fd9dadd6e7b9ec09eb6ed6db925bee4db25181dd323cd2047da
+  sha256: d70cc429781f8d75ed58e95ad953881a09b37a98b7c37ab90a6e555bd7de776d
 
 build:
   number: 0
