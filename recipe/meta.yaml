@@ -1,5 +1,5 @@
 {% set name = "astroalign" %}
-{% set version = "2.4.1" %}
+{% set version = "2.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bd14ee62ed0f1fd9dadd6e7b9ec09eb6ed6db925bee4db25181dd323cd2047da
+  sha256: d70cc429781f8d75ed58e95ad953881a09b37a98b7c37ab90a6e555bd7de776d
 
 build:
   number: 0
@@ -18,9 +18,10 @@ requirements:
   host:
     - pip
     - python
+    - setuptools
   run:
-    - numpy >=1.6.2
-    - python >=3.5
+    - numpy >=1.17
+    - python >=3.9
     - scikit-image
     - scipy >=0.15
     - sep
@@ -30,7 +31,7 @@ test:
     - astroalign
 
 about:
-  home: https://astroalign.readthedocs.io/
+  home: https://astroalign.quatrope.org/
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
@@ -41,8 +42,8 @@ about:
 
     It does so by finding similar 3-point asterisms (triangles) in both images
     and deducing the affine transformation between them.
-  doc_url: https://astroalign.readthedocs.io/
-  dev_url: https://github.com/toros-astro/astroalign
+  doc_url: https://astroalign.quatrope.org/
+  dev_url: https://github.com/quatrope/astroalign
 
 extra:
   recipe-maintainers:
