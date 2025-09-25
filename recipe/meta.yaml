@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 5b5b22127395c9b265df3afe9810f083bae63aaefb4bce8abe53ca211ef8b495
 
 build:
@@ -17,11 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
     - setuptools
   run:
     - numpy >=1.17
-    - python >=3.9
+    - python >={{ python_min }}
     - scikit-image
     - scipy >=0.15
     - sep
