@@ -1,5 +1,5 @@
 {% set name = "astroalign" %}
-{% set version = "2.6.1" %}
+{% set version = "2.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5b5b22127395c9b265df3afe9810f083bae63aaefb4bce8abe53ca211ef8b495
+  sha256: f993bdc8346c65b57ff6700c084431b7f870ce9bccc5dbfecf206633de1ea639
 
 build:
   number: 0
@@ -29,6 +29,8 @@ requirements:
 test:
   imports:
     - astroalign
+  requires:
+    - python {{ python_min }}
 
 about:
   home: https://astroalign.quatrope.org/
